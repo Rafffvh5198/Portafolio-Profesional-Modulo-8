@@ -1,0 +1,268 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 70px;
+}
+
+/* ================= NAVBAR GLASS ================= */
+.glass-navbar {
+    background: rgba(7, 26, 112, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* TEXTO NAVBAR */
+.glass-navbar .navbar-brand,
+.glass-navbar .nav-link {
+    color: #fefae0 !important;
+    font-weight: 500;
+}
+
+/* HOVER NAVBAR */
+.glass-navbar .nav-link:hover {
+    color: #95d5b2 !important;
+}
+
+/* ICONOS */
+.nav-link i {
+    margin-right: 5px;
+}
+
+/* MENÚ MOBILE */
+.navbar-collapse {
+    background: rgba(7, 26, 112, 0.9);
+    border-radius: 12px;
+    padding: 15px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+/* LINKS */
+.navbar-nav .nav-link {
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* HOVER MOBILE */
+.navbar-nav .nav-link:hover {
+    background-color: #2d6a4f;
+    color: white !important;
+}
+
+/* ================= HERO ================= */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #1e8eebe8, #071a70);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fefae0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    animation: fadeUp 1s ease-in-out;
+}
+
+.hero p {
+    animation: fadeUp 1.5s ease-in-out;
+}
+
+.hero a {
+    animation: fadeUp 2s ease-in-out;
+}
+
+/* ANIMACIÓN */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= SECCIONES ================= */
+.section {
+    padding: 60px 15px;
+}
+
+.section-light {
+    background-color: #fefae0;
+    color: #1b4332;
+}
+
+.section-green {
+    background-color: #d8f3dc;
+}
+
+.section-dark {
+    background-color: #2a0591;
+    color: #fefae0;
+}
+
+/* ================= CARDS ================= */
+.project-card {
+    border-radius: 12px;
+    background-color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+/* ================= HABILIDADES ================= */
+.skill-box {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.skill-box i {
+    font-size: 40px;
+    color: #2d6a4f;
+    margin-bottom: 10px;
+}
+
+.skill-box p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.skill-box:hover {
+    transform: translateY(-5px);
+    background: #d8f3dc;
+}
+
+/* ================= SOCIAL BAR ================= */
+.social-bar {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%) translateX(-20px);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.social-bar.show {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+.social-bar a {
+    background-color: #071a70;
+    color: #fefae0;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.social-bar a:hover {
+    background-color: #2d6a4f;
+    transform: scale(1.1);
+}
+
+/* ================= WHATSAPP ================= */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+    z-index: 1000;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background-color: #071a70;
+    color: #fefae0;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .social-bar {
+        display: none;
+    }
+}
+
+/* COLORES POR RED */
+.social-bar a:nth-child(1):hover {
+    background-color: #ea4335; /* email */
+}
+
+.social-bar a:nth-child(2):hover {
+    background-color: #333; /* github */
+}
+
+.social-bar a:nth-child(3):hover {
+    background-color: #0077b5; /* linkedin */
+}
+
+.social-bar a:nth-child(4):hover {
+    background-color: #25D366; /* whatsapp */
+}
+
+.social-bar a {
+    transition: all 0.3s ease;
+}
+
+.social-bar a:hover {
+    transform: scale(1.15) rotate(5deg);
+}
